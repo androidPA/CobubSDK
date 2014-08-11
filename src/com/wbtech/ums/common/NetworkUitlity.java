@@ -47,7 +47,6 @@ public class NetworkUitlity {
             httppost.setEntity(se);
             HttpResponse response = httpclient.execute(httppost);
 
-            Log.e("will", "response:" + response.toString());
             int status = response.getStatusLine().getStatusCode();
             CommonUtil.printLog("ums", status + "");
             String returnXML = EntityUtils.toString(response.getEntity());
